@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+  <style>
+    body{
+      background-color: rgb(41, 40, 40);
+    }
+    h1{
+      color: aliceblue;
+    }
+    form {
+      background-color: rgba(38, 37, 37, 0.34);  
+      max-width: 500px; 
+      margin: 50px auto; 
+      padding: 30px;
+      border-radius: 5px;
+      color: #fdfdfe; 
+      box-shadow: 0px 0px 10px 6px #fdfdfe; 
+    }
+
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+  
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    textarea {
+      width: 100%;
+      padding: 12px 20px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box; 
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+  
+    button {
+      background-color: #fc1414;
+      color: white;
+      padding: 10px 40px;
+      margin-left: 210px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: large;
+
+    }
+
+    .error {
+      color: red;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Registration</h1>
+  <form action="/register" method="POST">
+    <div class="error"></div>
+
+    <label for="student_name">Student Name:</label>
+    <input type="text" id="student_name" name="student_name" required><br><br>
+
+    <label for="father_name">Father Name:</label>
+    <input type="text" id="father_name" name="father_name" required><br><br>
+
+    <label for="mother_name">Mother Name:</label>
+    <input type="text" id="mother_name" name="mother_name" required><br><br>
+
+    <label for="phone_number">Phone Number:</label>
+    <input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{10}" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="date_of_birth">Date of Birth:</label>
+    <input type="date" id="date_of_birth" name="date_of_birth" required><br><br>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+
+    <label for="blood_group">Blood Group:</label>
+    <input type="text" id="blood_group" name="blood_group" required><br><br>
+
+    <label for="department">Department:</label>
+    <input type="text" id="department" name="department" required><br><br>
+
+    <label for="course">Course:</label>
+    <input type="text" id="course" name="course" required><br>
+    <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+
+        <button>Submit</button>
